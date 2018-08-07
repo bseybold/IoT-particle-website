@@ -38,6 +38,15 @@ window.onload=function() {
         document.getElementById('result').innerHTML = function_name + '(\"'+argument+'\") = ' + output_result;
       })
       .catch(error => console.error(`Fetch Error =\n`, error));
+	    if(output_result<20)
+	    {
+		    var img = document.createElement("img");
+		    img.src='http://google.com/images/logo.gif';
+		    img.width = 100;
+		    img.height = 100;
+		    img.alt = 'google';
+		    document.body.appendChild(img);
+	    }
     };
     postData(request_url, data)
     // You must return false to prevent the default form behavior
