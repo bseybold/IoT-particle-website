@@ -1,6 +1,10 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <meta charset="UTF-8">
 <head>
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>
 	<title>IoT Web Portal</title>
 	<script>
 window.onload=function() {
@@ -19,7 +23,6 @@ window.onload=function() {
     
     request = 'https://api.particle.io/v1/devices/'+device_id+'/'+variable_name+'?access_token='+access_key;
     console.log(request);
-
     (async function () {
       try {
         const myResponse = await fetch(request);
@@ -33,7 +36,6 @@ window.onload=function() {
         console.log('Error ' +error);
       }
     })()   // end of inline async function
-
     // You must return false to prevent the default form behavior
     return false;
   }
@@ -53,4 +55,6 @@ window.onload=function() {
 	<br>
 	<br>
 	<div id="result"></div>
-</body>
+</p>
+</div>
+</body>   
